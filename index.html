@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music player</title>
+  <link href="./dist/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="flex w-screen bg-black text-white font-sans ">
+    <!-- Left -->
+    <div class=" w-[25vw] py-2 ">
+      <div class="bg-[#121212] rounded-md p-[16px]">
+        <ul class="w-[36px]">
+          <li class="flex items-center gap-3 py-2 font-bold text-[16px]"><img src="/icons/logo.svg"
+              alt="spotify logo">MusicxD
+          </li>
+          <li class="flex items-center gap-3 py-2 font-bold text-[16px]"><img src="/icons/home.svg" alt="home logo">Home
+          </li>
+
+          <li class="py-2 flex space-x-2">
+            <img src="icons/search.svg" alt="">
+            <input type="text" id="searchBar" placeholder="Search..."
+              class=" p-2 rounded-md bg-[#1f1f1f] text-white outline-none border border-gray-700" />
+          </li>
+        </ul>
+      </div>
+
+      <!-- library -->
+      <div class="bg-[#121212] my-2 rounded-md flex items-center gap-2 p-[16px] font-bold text-[16px] mr-[1]">
+        <div><img src="/icons/playlist.svg" alt="playlist" width="36px"> </div>
+        Your Library
+        <div class="ml-[133px]"> <img src="/icons/plus.svg" alt="plus" width="36px"></div>
+      </div>
+
+      <!-- Song List -->
+      <div class="overflow-y-auto max-h-[45vh] px-[10px] songs-scroll font-sans">
+        <ul class="songsList list-none space-y-[11px] "></ul>
+      </div>
+
+
+      <!-- footer -->
+      <footer class="rounded-md bg-[#121212] px-[16px] py-10 ">
+        <div class="grid grid-cols-3 text-gray-400 text-[12px]">
+          <a href="#" class="hover:underline">Legal</a>
+          <a href="#" class="hover:underline">Safety</a>
+          <a href="#" class="hover:underline">Privacy Policy</a>
+          <a href="#" class="hover:underline">Cookies</a>
+          <a href="#" class="hover:underline">About Ads</a>
+          <a href="#" class="hover:underline">Accessibility</a>
+          <a href="#" class="hover:underline">Cookies</a>
+        </div>
+
+        <div class="py-4 ">
+          <button class="flex items-center border rounded-md px-4 py-1.5 hover:bg-white hover:text-black ">
+            English
+          </button>
+        </div>
+      </footer>
+
+
+    </div>
+
+    <!-- right -->
+    <div class="w-[75vw] py-2 px-2 max-h-[100vh] relative">
+      <!-- header -->
+      <div class="bg-[#121212] rounded-md py-2 px-2">
+        <div class="flex justify-end space-x-3">
+          <button
+            class="bg-white rounded-lg text-black px-4 py-2 hover:scale-105 transiton duration-300 ease-in-out">Sign
+            up</button>
+          <button
+            class="bg-white rounded-lg text-black px-4 py-2 transform hover:scale-105 transition duration-300 ease-in-out ">Log
+            in</button>
+        </div>
+      </div>
+
+      <!-- cards -->
+      <div class="bg-[#121212] m-[7px] rounded-md">
+        <h1 class="text-2xl font-sans font-bold p-[12px]">Trending Songs</h1>
+        <!-- card 1 -->
+        <div class="flex flex-wrap gap-4 m-[14px] relative overflow-scroll max-h-[70vh]">
+          <div class="w-[230px] group rounded-md p-[10px]  font-sans text-[17px] hover:bg-[#282727ba]"
+            data-song="songs/Aapke pyaar me.mp3">
+            <img src="images/aapkepyaarme.jpg" class="object-cover" alt="aapkepyaarme">
+            <h2>Aapke Pyaar Mein-From"Raaz"</h2>
+            <p>Alka Yagnik</p>
+          </div>
+
+          <!--  card 2 -->
+          <div class="w-[230px] group rounded-md p-[10px]  font-sans text-[17px] hover:bg-[#282727ba]"
+            data-song="songs/Haseen.mp3">
+            <img src="images/haseen.jpg" class="object-cover" alt="haseen">
+            <h2>HASEEN</h2>
+            <p>TALWIINDER, NDS, RIPPY </p>
+          </div>
+
+          <!-- card3 -->
+          <div class="w-[230px] h-[320px] group rounded-md p-[10px]  font-sans text-[17px]  hover:bg-[#282727ba] "
+            data-song="songs/Jugraafiya.mp3">
+            <img src="images/jugraafiya.jpg" class="w-full h-[200px] object-cover" alt="jugraafiya">
+            <h2>Jugraafiya-From "Super 30"</h2>
+            <p>Udit Narayan,Shreya Ghoshal</p>
+          </div>
+
+          <!-- card4 -->
+          <div class="w-[230px] group rounded-md p-[10px]  font-sans text-[17px] hover:bg-[#282727ba]"
+            data-song="songs/Main Yahaan Hoon.mp3">
+            <img src="images/mainyahahoon.jpg" class="object-cover" alt="mainyahahoon">
+            <h2>Main Yahaan Hoon-From "Veer-Zaara"</h2>
+            <p>Udit Narayan</p>
+          </div>
+
+          <!-- card 5 -->
+          <div class="w-[230px] h-[320px] group rounded-md p-[10px]  font-sans text-[17px] hover:bg-[#282727ba]"
+            data-song="songs/Man Mera.mp3">
+            <img src="images/mannmera.jpg" class="object-cover w-full h-[200px]" alt="manmera">
+            <h2>Mann Mera-From "Table No.21"</h2>
+            <p>Gajendra Verma</p>
+          </div>
+
+          <!-- card 6 -->
+          <div class="w-[230px] group rounded-md p-[10px]  font-sans text-[17px] hover:bg-[#282727ba]"
+            data-song="songs/Sajde.mp3">
+            <img src="images/sajde.jpg" class="object-cover" alt="sajde">
+            <h2>Sajde - Official Music Video</h2>
+            <p>Faheem Abdullah</p>
+          </div>
+
+          <!-- card 7 -->
+          <div class="w-[230px] group rounded-md p-[10px]  font-sans text-[17px] hover:bg-[#282727ba]"
+            data-song="songs/Shake It To The Max.mp3">
+            <img src="images/shakeit.jpg" class="object-cover" alt="shakeit">
+            <h2>Shake It To The Max</h2>
+            <p>MOLIY, Shenseea</p>
+          </div>
+
+          <!-- card 8 -->
+          <div class="w-[230px] group rounded-md p-[10px]  font-sans text-[17px] hover:bg-[#282727ba]"
+            data-song="songs/Superstar.mp3">
+            <img src="images/superstar.jpg" class="object-cover" alt="superstar">
+            <h2>SuperStar</h2>
+            <p>Dox, JASKARAN & Rita Kim</p>
+          </div>
+
+          <!-- card 9 -->
+          <div class="w-[230px] group rounded-md p-[10px]  font-sans text-[17px] hover:bg-[#282727ba]"
+            data-song="songs/Yun Hi.mp3">
+            <img src="images/yunhi.jpg" class="object-cover" alt="yunhi">
+            <h2>Yun Hi-From"Tanu Weds Manu"</h2>
+            <p>Mohit Chauhan</p>
+          </div>
+
+          <!-- card 10 -->
+          <div class="w-[230px] group rounded-md p-[10px]  font-sans text-[17px] hover:bg-[#282727ba]"
+            data-song="songs/phir Le Aya.mp3">
+            <img src="images/barfi.jpg" class="object-cover" alt="">
+            <h2>Phir Le Aya Dil-From "Burfi"</h2>
+            <p>Pritam,Rekha Bhardwaj</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Playbar -->
+      <div class="absolute bottom-0 w-full backdrop-blur-md bg-[#3b3535cc] px-4 py-3 text-white">
+        <div class="flex justify-between items-center">
+          <!-- Song Info -->
+          <div id="playbar-info" class="truncate max-w-[300px]">
+            <div id="playbar-title" class="text-lg font-bold truncate">No Song Playing</div>
+            <div id="playbar-artist" class="text-sm text-gray-300 truncate">Artist</div>
+          </div>
+
+          <!-- Controls -->
+          <div class="flex items-center gap-3">
+            <img src="icons/prevsong.svg" class="cursor-pointer btn-prev invert" width="20">
+            <img src="icons/playing.svg" class="cursor-pointer btn-play invert" width="25">
+            <img src="icons/nextsong.svg" class="cursor-pointer btn-next invert" width="20">
+            <img src="icons/mute.svg" class="cursor-pointer btn-mute invert" width="20">
+            <input id="progress" type="range" min="0" max="100" value="0" class="w-[100px] h-1 accent-gray-300">
+          </div>
+
+          <!-- Duration -->
+          <div id="playbar-duration" class="text-sm min-w-[40px]">0:00</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
