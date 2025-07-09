@@ -2,7 +2,7 @@
 
 MusicxD is a simple yet elegant music player web app where you can play songs, view trending tracks, and enjoy a Spotify-inspired interface.
 
-![MusicxD Screenshot] (./screenshot.png)
+![MusicxD Screenshot](./screenshot.png)
 
 ## 🚀 Features
 - Browse trending songs with album covers
